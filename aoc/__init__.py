@@ -24,16 +24,16 @@ def get_puzzle_input_filename(data_dir: str | Path | None = None) -> Path:
     'data' below the project root folder. The folder structure below 'data'
     must be comparable to the location of the caller script, e.g.:
       project_root
-        ├─► aoc
-        │    └─► __init__.py        this file
-        ├─► parent_caller
-        │    └─► caller.py          caller of this function
-        └─► data                    data folder root
-             └─► parent_caller      matches parent from caller
-                  └─► caller.txt    puzzle input file, e.g. caller with .txt
+       ├─► aoc
+       │    └─► __init__.py        this file (__file__)
+       ├─► parent_caller
+       │    └─► caller.py          caller of this function
+       └─► data                    data folder root
+            └─► parent_caller      matches parent from caller
+                 └─► caller.txt    puzzle input file, e.g. caller with .txt
 
-    This example shows one level of folders but multiple levels are supported
-    as well.
+    This example shows one level above the caller, but multiple levels are
+    supported as well.
 
     Args:
         data_dir (str | Path | None, optional): base name of the data
